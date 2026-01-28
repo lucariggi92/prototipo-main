@@ -10,9 +10,9 @@ export default function Home() {
                 <div className="container">
                     <div className="row vh-100">
                         <div className="col-12 text-center d-flex justify-content-center align-items-center flex-column">
-                            <h1 className="display-4 fw-bold mb-3 text-light">Benvenuti nella lista viaggi della miao corporation</h1>
-                            <p className="lead text-light fs-2"> i Viaggi gatteschi più sgravati di Boolean!</p>
-                            <NavLink className="btn btn-outline-info py-3 mb-4" to="/viaggi">VOLA VERSO I GATTINI</NavLink>
+                            <h1 className="display-4 fw-bold mb-3 text-light">Benvenuti nella lista viaggi </h1>
+                            <p className="lead text-light fs-2"> i Viaggi di Boolean!</p>
+                            <NavLink className="btn btn-outline-info py-3 mb-4" to="/viaggi">I TUOI VIAGGI</NavLink>
                         </div>
 
 

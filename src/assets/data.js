@@ -16,8 +16,8 @@ export const viaggiatori = [
 
 export const viaggi = [
     { id: 1, localita: "Parigi", dataInizio: "2026-05-01", dataFine: "2026-05-10", tipologia: "soft", img: "../public/img/parigi.jpg", stato: "in corso" },
-    { id: 2, localita: "Safari Kenya", dataInizio: "2026-06-05", dataFine: "2026-06-15", tipologia: "wild", img: "../public/img/kenya-safari.jpg", stato: "terminato" },
-    { id: 3, localita: "Barcellona", dataInizio: "2026-07-01", dataFine: "2026-07-08", tipologia: "soft", img: "../public/img/barcellona.jpg", stato: "in corso" },
-    { id: 4, localita: "Islanda", dataInizio: "2026-08-10", dataFine: "2026-08-20", tipologia: "wild", img: "../public/img/islanda.jpg", stato: "in corso" },
+    { id: 2, localita: "Safari Kenya", dataInizio: "2026-06-05", dataFine: "2026-06-15", tipologia: "wild", img: "../public/img/kenya-safari.jpg", stato: "in programma" },
+    { id: 3, localita: "Barcellona", dataInizio: "2026-07-01", dataFine: "2026-07-08", tipologia: "soft", img: "../public/img/barcellona.jpg", stato: "in programma" },
+    { id: 4, localita: "Islanda", dataInizio: "2026-08-10", dataFine: "2026-08-20", tipologia: "wild", img: "../public/img/islanda.jpg", stato: "terminato" },
     { id: 5, localita: "Londra", dataInizio: "2026-09-05", dataFine: "2026-09-12", tipologia: "soft", img: "../public/img/londra.jpg", stato: "terminato" },
-    { id: 6, localita: "Milano", dataInizio: "2026-10-05", dataFine: "2026-10-12", tipologia: "soft", img: "../public/img/milano.jpg", stato: "in programma" }]
+    { id: 6, localita: "Milano", dataInizio: "2026-10-05", dataFine: "2026-10-12", tipologia: "soft", img: "../public/img/milano.jpg", stato: "terminato" }]
