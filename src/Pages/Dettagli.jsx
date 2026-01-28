@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom"
 import { viaggi } from "../assets/data";
 import { viaggiatori } from "../assets/data";
-import { use, useState } from "react";
+import { use, useState } from "react"
 
 
 export default function Dettagli() {
@@ -33,12 +33,15 @@ export default function Dettagli() {
     let textFinito = "";
 
     if (viaggio.stato === "in corso") {
-        textIniziato = `INIZIATO  ${viaggio.dataInizio}`;
-        textFinito = `FINIRA'  ${viaggio.dataFine}`;
+        textIniziato = `INIZIATO`;
+        textFinito = `FINIRA'`;
 
-    } else {
-        textIniziato = `INIZIATO IL  ${viaggio.dataInizio}`;
-        textFinito = `FINITO IL ${viaggio.dataFine}`;
+    } else if (viaggio.stato === "terminato"){
+        textIniziato = `INIZIATO IL  `;
+        textFinito = `FINITO IL `;
+    }else{
+        textIniziato = `INIZIO PROGRAMMATO`;
+        textFinito = `FINE`;
     }
 
 
@@ -82,32 +85,41 @@ export default function Dettagli() {
 
     return (
         <>
-            <h1 className="text-center my-4">{viaggio.localita}</h1>
-            <div className="container">
-                <div className="row">
 
+            <div className="container my-5 py-5">
+                <h1 className="text-center my-4">{viaggio.localita}</h1>
+                <div className="row row-cols-1 row-cols-ms-1">
+                    {/* //IMMAGINE */}
+                    <div className="col">
+                        <div className="card ">
+
+                            <img className="card-img" src={viaggio.img} alt="" />
+                        </div>
+
+
+                    </div>
                     {/* //DETTAGLI DEL VIAGGIO */}
-                    <div className="col-4">
+                    <div className="col mt-2">
                         <div className="card">
+                            <div className="card-header">
+                                <h2>DETTAGLI DEL VIAGGIO:</h2>
+                            </div>
                             <div className="card-body">
 
-                                <h3>{textIniziato}</h3>
-                                <h3>{textFinito}</h3>
-                                <h3>Partecipanti: {takePeople.length}</h3>
+                                <h3>{textIniziato} <span className="text-success">{viaggio.dataInizio}</span></h3>
+                                <h3>{textFinito} <span className="text-danger">{viaggio.dataFine}</span></h3>
                                 <h3>Tipologia: {viaggio.tipologia}</h3>
+                                <h3>Partecipanti: {takePeople.length}</h3>
+
                             </div>
                         </div>
+
                     </div>
 
-                    {/* //IMMAGINE */}
-                    <div className="col-8">
-                        <h2></h2>
-                        <p>IMG</p>
-                        
-                    </div>
+
 
                     {/* //COLONNA CON L'ACCORDION DENTRO  */}
-                    <div className="col-12 mt-3">
+                    <div className="col mt-3">
                         <div className="card">
                             <div className="card-body d-flex">
 
@@ -157,14 +169,27 @@ export default function Dettagli() {
 
                         </form>
                     </div>
-                    <div className={filter.length === 2 ? "d-none" : "col-12"}>
-                        <div className="card">
-                            <div className="card-body">
-                                <h3>{filter[0].nome}</h3>
-                                <h3>{filter[0].email}</h3>
-                                <h3>{filter[0].telefono}</h3>
+                    <div className={filter.length === 2 ? "d-none" : "col-12 mt-2"}>
+                        <div className="row">
+                            <div className="col-sm-12 col-md-8 col-lg-8">
+                                <div className="card">
+                                    <div className="card-body ">
+                                        <h3>{filter[0].nome} {filter[0].cognome}</h3>
+                                        <h3>Email: <a href="">{filter[0].email}</a></h3>
+                                        <h3>Cell: <a href="">{filter[0].telefono}</a></h3>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-4 col-lg-4">
+                                <div className="d-flex justify-content-center align-items-center card h-100">
+                                    <img className="miao-img" src="/img/profile.png" alt="" />
+                                </div>
+
+
                             </div>
                         </div>
+
                     </div>
                     <div className="col-12 mt-3">
                         <button className="btn btn-secondary" onClick={goBack}>Torna Indietro</button>

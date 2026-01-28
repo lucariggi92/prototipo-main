@@ -15,8 +15,8 @@ export default function Header() {
 
     return (
         <>
-            <header>
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <header className="position-fixed top-0 w-100 z-3">
+                <nav class="navbar navbar-expand bg-body-tertiary">
                     <div class="container-fluid">
                         <NavLink className="nav-link" to="/viaggi">Prototipo</NavLink>
                        

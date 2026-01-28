@@ -1,0 +1,44 @@
+
+
+.card-viaggi{
+    width: 10vh;
+    
+    
+}
+
+
+
+.altezza{
+    height: 60vh;
+}
+.altezza-2{
+    height: 40vh;
+}
+.style{
+    list-style: none;
+}
+.footer-tall {
+    height: 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+.miao-banner {
+    background-image: url("../../public/img/bg-home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+
+.miao-img {
+    width: 170px;
+    height: 150px;
+}
